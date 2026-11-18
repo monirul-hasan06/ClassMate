@@ -1232,3 +1232,4 @@ class DatabaseManager:
                 row = conn.execute(f"SELECT COUNT(*) AS cnt FROM {t};").fetchone()
                 stats[t] = row["cnt"] if row else 0
         return stats
+

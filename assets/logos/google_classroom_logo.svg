@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Classroom Board Green -->
+    <linearGradient id="boardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E8E3E"/>
+      <stop offset="100%" stop-color="#137333"/>
+    </linearGradient>
+
+    <!-- Outer Frame Gold/Yellow -->
+    <linearGradient id="frameGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F9AB00"/>
+      <stop offset="100%" stop-color="#E37400"/>
+    </linearGradient>
+
+    <!-- Drop Shadow -->
+    <filter id="gcShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#062812" flood-opacity="0.40"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Board Frame -->
+  <rect x="36" y="56" width="440" height="400" rx="48" fill="url(#frameGrad)" filter="url(#gcShadow)"/>
+  <rect x="42" y="62" width="428" height="388" rx="42" fill="#F29900"/>
+
+  <!-- Inner Chalkboard -->
+  <rect x="64" y="84" width="384" height="344" rx="28" fill="url(#boardGrad)"/>
+
+  <!-- White Teacher (Center Figure) -->
+  <g fill="#FFFFFF">
+    <!-- Teacher Head -->
+    <circle cx="256" cy="182" r="38"/>
+    <!-- Teacher Torso -->
+    <path d="M 188 322 C 188 266 218 244 256 244 C 294 244 324 266 324 322 Z"/>
+  </g>
+
+  <!-- Left Student (Translucent Silhouette) -->
+  <g fill="#FFFFFF" opacity="0.82">
+    <!-- Head -->
+    <circle cx="154" cy="216" r="28"/>
+    <!-- Torso -->
+    <path d="M 106 322 C 106 278 128 262 154 262 C 172 262 188 270 196 286 C 190 296 188 308 188 322 Z"/>
+  </g>
+
+  <!-- Right Student (Translucent Silhouette) -->
+  <g fill="#FFFFFF" opacity="0.82">
+    <!-- Head -->
+    <circle cx="358" cy="216" r="28"/>
+    <!-- Torso -->
+    <path d="M 324 322 C 324 308 322 296 316 286 C 324 270 340 262 358 262 C 384 262 406 278 406 322 Z"/>
+  </g>
+
+  <!-- Chalk Tray / Eraser Accent -->
+  <rect x="96" y="396" width="68" height="8" rx="4" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="180" y="396" width="36" height="8" rx="4" fill="#FDE293" opacity="0.85"/>
+</svg>

@@ -13,6 +13,7 @@ from PyQt6.QtWidgets import (
 )
 
 from database.db_manager import DatabaseManager
+from ui.resources import get_app_icon, get_app_logo_pixmap
 
 
 class OnboardingDialog(QDialog):
@@ -26,7 +27,8 @@ class OnboardingDialog(QDialog):
         super().__init__(parent)
         self.db = db
         self.setWindowTitle("Welcome to ClassMate – Academic & Learning Assistant")
-        self.setMinimumWidth(520)
+        self.setWindowIcon(get_app_icon())
+        self.setMinimumWidth(560)
         self.setModal(True)
         self._build_ui()
 
@@ -37,22 +39,32 @@ class OnboardingDialog(QDialog):
         layout.setContentsMargins(24, 24, 24, 24)
         layout.setSpacing(16)
 
-        # Header Card
+        # Header Card with Modern Logos
         hero = QFrame()
         hero.setProperty("class", "HeroCard")
-        hero_layout = QVBoxLayout(hero)
+        hero_layout = QHBoxLayout(hero)
         hero_layout.setContentsMargins(18, 16, 18, 16)
+        hero_layout.setSpacing(14)
 
-        title = QLabel("🎓 Welcome to ClassMate")
-        title.setStyleSheet("font-size: 20px; font-weight: 800;")
+        app_logo_lbl = QLabel()
+        app_logo_lbl.setPixmap(get_app_logo_pixmap(64, 64))
+        app_logo_lbl.setFixedSize(64, 64)
+        app_logo_lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        hero_text_col = QVBoxLayout()
+        hero_text_col.setSpacing(3)
+        title = QLabel("Welcome to ClassMate")
+        title.setStyleSheet("font-size: 20px; font-weight: 600;")
         subtitle = QLabel(
             "Personalize your academic planner, routine preferences, and BUBT student profile."
         )
         subtitle.setWordWrap(True)
         subtitle.setProperty("class", "MutedText")
+        hero_text_col.addWidget(title)
+        hero_text_col.addWidget(subtitle)
 
-        hero_layout.addWidget(title)
-        hero_layout.addWidget(subtitle)
+        hero_layout.addWidget(app_logo_lbl)
+        hero_layout.addLayout(hero_text_col, 1)
         layout.addWidget(hero)
 
         # Quick Team Presets (Md. Monirul Hasan & Yusuf Ali)
@@ -108,10 +120,10 @@ class OnboardingDialog(QDialog):
 
         # Footer Buttons
         btn_row = QHBoxLayout()
-        btn_reset_demo = QPushButton("🔄 Reset & Seed BUBT Sample Data")
+        btn_reset_demo = QPushButton("🔄 Reset && Seed BUBT Sample Data")
         btn_reset_demo.clicked.connect(self._reseed_demo)
 
-        btn_save = QPushButton("🚀 Save & Launch Dashboard")
+        btn_save = QPushButton("🚀 Save && Launch Dashboard")
         btn_save.setProperty("class", "PrimaryBtn")
         btn_save.clicked.connect(self._save_and_accept)
 
@@ -157,3 +169,4 @@ class OnboardingDialog(QDialog):
             onboarded=1,
         )
         self.accept()
+

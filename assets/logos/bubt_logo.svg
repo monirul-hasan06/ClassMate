@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Deep Royal Navy Radial Gradient -->
+    <radialGradient id="bubtNavyGrad" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="60%" stop-color="#172554"/>
+      <stop offset="100%" stop-color="#0A0F1D"/>
+    </radialGradient>
+
+    <!-- Rich Academic Gold Gradient -->
+    <linearGradient id="bubtGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="40%" stop-color="#F59E0B"/>
+      <stop offset="85%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+
+    <!-- Torch Flame Gradient -->
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="45%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#FDE047"/>
+    </linearGradient>
+
+    <!-- Drop Shadow -->
+    <filter id="sealShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0B132B" flood-opacity="0.48"/>
+    </filter>
+
+    <!-- Text Curved Paths -->
+    <path id="curveTop" d="M 68 256 A 188 188 0 0 1 444 256" fill="none"/>
+    <path id="curveBottom" d="M 444 256 A 188 188 0 0 1 68 256" fill="none"/>
+  </defs>
+
+  <!-- Outer Deep Navy Circle Base -->
+  <circle cx="256" cy="256" r="236" fill="url(#bubtNavyGrad)" filter="url(#sealShadow)"/>
+
+  <!-- Concentric Gold Filigree Borders -->
+  <circle cx="256" cy="256" r="232" fill="none" stroke="url(#bubtGoldGrad)" stroke-width="6"/>
+  <circle cx="256" cy="256" r="218" fill="none" stroke="url(#bubtGoldGrad)" stroke-width="2.5" stroke-dasharray="7,5"/>
+  <circle cx="256" cy="256" r="148" fill="none" stroke="url(#bubtGoldGrad)" stroke-width="5"/>
+  <circle cx="256" cy="256" r="142" fill="none" stroke="#3B82F6" stroke-width="2"/>
+
+  <!-- University Name Along Upper Arc -->
+  <text font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="21" font-weight="900" fill="#FFFFFF" letter-spacing="3.2">
+    <textPath href="#curveTop" startOffset="50%" text-anchor="middle">
+      BANGLADESH UNIVERSITY OF BUSINESS &amp; TECH
+    </textPath>
+  </text>
+
+  <!-- Established & Location Along Lower Arc -->
+  <text font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="19" font-weight="800" fill="url(#bubtGoldGrad)" letter-spacing="3.8">
+    <textPath href="#curveBottom" startOffset="50%" text-anchor="middle">
+      ★ ESTD. 2003 • DHAKA ★
+    </textPath>
+  </text>
+
+  <!-- Inner Center Disc Background -->
+  <circle cx="256" cy="256" r="138" fill="#0B1120"/>
+
+  <!-- Torch of Wisdom / Enlightenment (Center Core) -->
+  <g transform="translate(256, 175)">
+    <!-- Radiant Torch Flame -->
+    <path d="M 0 -46 C -24 -16 -6 6 0 24 C 6 6 24 -16 0 -46 Z" fill="url(#flameGrad)"/>
+    <path d="M 0 -28 C -10 -8 0 4 0 16 C 0 4 10 -8 0 -28 Z" fill="#FEF08A"/>
+    <!-- Torch Holder Base -->
+    <path d="M -16 24 L 16 24 L 10 50 L -10 50 Z" fill="url(#bubtGoldGrad)"/>
+    <line x1="-14" y1="34" x2="14" y2="34" stroke="#78350F" stroke-width="3"/>
+  </g>
+
+  <!-- Academic Graduation Cap (Hovering Above Torch) -->
+  <g transform="translate(256, 132) scale(0.82)">
+    <polygon points="0,-26 56,0 0,26 -56,0" fill="#F8FAFC"/>
+    <path d="M -56 0 L -56 7 L 0 33 L 56 7 L 56 0 L 0 26 Z" fill="#94A3B8"/>
+    <ellipse cx="0" cy="0" rx="7" ry="5" fill="url(#bubtGoldGrad)"/>
+    <path d="M 0 0 Q 38 8 42 32" fill="none" stroke="url(#bubtGoldGrad)" stroke-width="3.5"/>
+  </g>
+
+  <!-- Open Book of Knowledge (Center Base) -->
+  <g transform="translate(256, 250)">
+    <!-- Book Pages Canvas -->
+    <path d="M 0 6 C -28 -16 -70 -14 -102 0 L -102 36 C -70 22 -28 20 0 44 C 28 20 70 22 102 36 L 102 0 C 70 -14 28 -16 0 6 Z" 
+          fill="#FFFFFF"/>
+    <!-- Page Texture Lines -->
+    <path d="M -88 10 C -60 -1 -26 1 -4 21" stroke="#CBD5E1" stroke-width="2.5" fill="none"/>
+    <path d="M 88 10 C 60 -1 26 1 4 21" stroke="#CBD5E1" stroke-width="2.5" fill="none"/>
+    <path d="M -88 21 C -60 10 -26 12 -4 32" stroke="#CBD5E1" stroke-width="2.5" fill="none"/>
+    <path d="M 88 21 C 60 10 26 12 4 32" stroke="#CBD5E1" stroke-width="2.5" fill="none"/>
+    <!-- Gold Spine Divider -->
+    <line x1="0" y1="6" x2="0" y2="44" stroke="url(#bubtGoldGrad)" stroke-width="4"/>
+  </g>
+
+  <!-- Prominent BUBT Bold Monogram -->
+  <text x="256" y="340" font-family="'Inter', 'Impact', 'Arial Black', sans-serif" font-size="46" font-weight="900" 
+        fill="url(#bubtGoldGrad)" text-anchor="middle" letter-spacing="6">
+    BUBT
+  </text>
+  <text x="256" y="364" font-family="'Inter', 'Segoe UI', sans-serif" font-size="12" font-weight="800" 
+        fill="#94A3B8" text-anchor="middle" letter-spacing="2.5">
+    IN PURSUIT OF EXCELLENCE
+  </text>
+</svg>

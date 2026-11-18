@@ -92,13 +92,20 @@ def build_stylesheet(theme_preference: str = "Dark") -> str:
         QMainWindow, QDialog {{
             background-color: {p['bg_main']};
             color: {p['text_primary']};
-            font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+            font-family: 'Segoe UI Variable Text', 'Segoe UI', Arial, sans-serif;
             font-size: 13px;
+            font-weight: 400;
         }}
         QWidget {{
             color: {p['text_primary']};
-            font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+            font-family: 'Segoe UI Variable Text', 'Segoe UI', Arial, sans-serif;
             font-size: 13px;
+            font-weight: 400;
+        }}
+        QPlainTextEdit {{
+            font-family: 'Cascadia Code', 'Consolas', 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: 400;
         }}
         QFrame#Sidebar {{
             background-color: {p['bg_sidebar']};
@@ -107,13 +114,13 @@ def build_stylesheet(theme_preference: str = "Dark") -> str:
         QLabel#BrandTitle {{
             color: #FFFFFF;
             font-size: 20px;
-            font-weight: 800;
+            font-weight: 600;
             letter-spacing: 0.5px;
         }}
         QLabel#BrandSubtitle {{
             color: #94A3B8;
             font-size: 11px;
-            font-weight: 500;
+            font-weight: 400;
         }}
         QPushButton.NavButton {{
             background-color: transparent;
@@ -151,17 +158,17 @@ def build_stylesheet(theme_preference: str = "Dark") -> str:
         }}
         QLabel.PageTitle {{
             font-size: 22px;
-            font-weight: 800;
+            font-weight: 600;
             color: {p['text_primary']};
         }}
         QLabel.SectionTitle {{
             font-size: 15px;
-            font-weight: 700;
+            font-weight: 600;
             color: {p['text_primary']};
         }}
         QLabel.MutedText {{
             color: {p['text_secondary']};
-            font-size: 12px;
+            font-size: 13px;
         }}
         QPushButton {{
             background-color: {p['bg_card_alt']};
@@ -180,7 +187,7 @@ def build_stylesheet(theme_preference: str = "Dark") -> str:
             border: none;
             border-radius: 8px;
             padding: 8px 16px;
-            font-weight: 700;
+            font-weight: 600;
         }}
         QPushButton.PrimaryBtn:hover {{
             background-color: {p['accent_hover']};
@@ -191,7 +198,7 @@ def build_stylesheet(theme_preference: str = "Dark") -> str:
             border: none;
             border-radius: 8px;
             padding: 8px 16px;
-            font-weight: 700;
+            font-weight: 600;
         }}
         QPushButton.SuccessBtn:hover {{
             background-color: {p['success_hover']};
@@ -202,7 +209,7 @@ def build_stylesheet(theme_preference: str = "Dark") -> str:
             border: none;
             border-radius: 8px;
             padding: 8px 16px;
-            font-weight: 700;
+            font-weight: 600;
         }}
         QPushButton.DangerBtn:hover {{
             background-color: {p['danger_hover']};
@@ -263,7 +270,7 @@ def build_stylesheet(theme_preference: str = "Dark") -> str:
         QHeaderView::section {{
             background-color: {p['bg_card_alt']};
             color: {p['text_primary']};
-            font-weight: 700;
+            font-weight: 600;
             padding: 8px 10px;
             border: none;
             border-bottom: 1px solid {p['border']};
@@ -279,7 +286,7 @@ def build_stylesheet(theme_preference: str = "Dark") -> str:
             background-color: {p['bg_input']};
             text-align: center;
             color: {p['text_primary']};
-            font-weight: 700;
+            font-weight: 400;
             min-height: 16px;
             max-height: 16px;
         }}
@@ -292,3 +299,4 @@ def build_stylesheet(theme_preference: str = "Dark") -> str:
             font-weight: 600;
         }}
     """
+

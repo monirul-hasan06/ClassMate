@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- YouTube Red Gradient -->
+    <linearGradient id="ytRedGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="100%" stop-color="#E60000"/>
+    </linearGradient>
+
+    <!-- Drop Shadow -->
+    <filter id="ytShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#4A0000" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+
+  <!-- Official-Spec Pill Canvas -->
+  <path d="M 480 172 C 475 128 440 93 396 88 C 348 80 256 80 256 80 C 256 80 164 80 116 88 C 72 93 37 128 32 172 C 24 218 24 256 24 256 C 24 256 24 294 32 340 C 37 384 72 419 116 424 C 164 432 256 432 256 432 C 256 432 348 432 396 424 C 440 419 475 384 480 340 C 488 294 488 256 488 256 C 488 256 488 218 480 172 Z" 
+        fill="url(#ytRedGrad)" filter="url(#ytShadow)"/>
+
+  <!-- Subtle Top Highlight Sheen -->
+  <path d="M 480 172 C 475 128 440 93 396 88 C 348 80 256 80 256 80 C 256 80 164 80 116 88 C 72 93 37 128 32 172 C 30 183 28 196 27 210 C 130 190 380 190 485 210 C 484 196 482 183 480 172 Z" 
+        fill="#FFFFFF" opacity="0.12"/>
+
+  <!-- Centered White Play Triangle with Soft Rounded Corners -->
+  <polygon points="214,178 348,256 214,334" fill="#FFFFFF"/>
+</svg>

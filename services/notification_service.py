@@ -148,3 +148,4 @@ class NotificationService(QObject):
             title = f"Nightly Schedule Summary ({tomorrow_day})"
             msg = f"You have {len(tomorrow_classes)} class(es) scheduled for {tomorrow_day}. Stay prepared!"
             self.send_notification(title, msg, "summary")
+

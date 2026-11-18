@@ -16,6 +16,7 @@ from PyQt6.QtWidgets import (
 )
 
 from database.db_manager import DatabaseManager
+from ui.resources import get_app_logo_pixmap
 
 
 class DashboardPage(QWidget):
@@ -53,6 +54,12 @@ class DashboardPage(QWidget):
         greeting_frame.setProperty("class", "Card")
         greeting_layout = QHBoxLayout(greeting_frame)
         greeting_layout.setContentsMargins(20, 16, 20, 16)
+        greeting_layout.setSpacing(14)
+
+        brand_logo_lbl = QLabel()
+        brand_logo_lbl.setPixmap(get_app_logo_pixmap(72, 72))
+        brand_logo_lbl.setFixedSize(72, 72)
+        brand_logo_lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         greet_left = QVBoxLayout()
         self.lbl_greeting = QLabel("Good Afternoon, Md. Monirul Hasan")
@@ -73,6 +80,7 @@ class DashboardPage(QWidget):
         greet_right.addWidget(self.lbl_date)
         greet_right.addWidget(self.lbl_semester_badge)
 
+        greeting_layout.addWidget(brand_logo_lbl)
         greeting_layout.addLayout(greet_left, 1)
         greeting_layout.addLayout(greet_right)
         self.main_layout.addWidget(greeting_frame)
@@ -105,7 +113,7 @@ class DashboardPage(QWidget):
 
         # Course Code & Course Name
         self.lbl_nc_title = QLabel("CSE 208: Database Management System Lab")
-        self.lbl_nc_title.setStyleSheet("font-size: 22px; font-weight: 800;")
+        self.lbl_nc_title.setStyleSheet("font-size: 22px; font-weight: 600;")
         self.lbl_nc_title.setWordWrap(True)
         nc_layout.addWidget(self.lbl_nc_title)
 
@@ -115,13 +123,13 @@ class DashboardPage(QWidget):
         details_grid.setVerticalSpacing(6)
 
         self.lbl_nc_schedule = QLabel("🕒 Schedule: 8:15 AM - 11:15 AM (Tuesday)")
-        self.lbl_nc_schedule.setStyleSheet("font-size: 14px; font-weight: 600;")
+        self.lbl_nc_schedule.setStyleSheet("font-size: 14px; font-weight: 400;")
 
         self.lbl_nc_venue = QLabel("🏢 Venue: Building 2, Room 417")
-        self.lbl_nc_venue.setStyleSheet("font-size: 14px; font-weight: 600;")
+        self.lbl_nc_venue.setStyleSheet("font-size: 14px; font-weight: 400;")
 
         self.lbl_nc_instructor = QLabel("👩‍🏫 Instructor: Farah Akter Munmun [FAM]")
-        self.lbl_nc_instructor.setStyleSheet("font-size: 14px; font-weight: 600;")
+        self.lbl_nc_instructor.setStyleSheet("font-size: 14px; font-weight: 400;")
 
         self.lbl_nc_status = QLabel("📋 Today's Log: Not marked yet")
         self.lbl_nc_status.setStyleSheet("font-size: 13px; font-weight: 700; color: #F59E0B;")
@@ -137,7 +145,7 @@ class DashboardPage(QWidget):
         action_row.setSpacing(12)
 
         lbl_quick = QLabel("Quick Attendance Logger:")
-        lbl_quick.setStyleSheet("font-weight: 700;")
+        lbl_quick.setStyleSheet("font-weight: 600;")
 
         self.btn_mark_attended = QPushButton("✓ Mark Attended")
         self.btn_mark_attended.setProperty("class", "SuccessBtn")
@@ -390,7 +398,7 @@ class DashboardPage(QWidget):
 
             left_col = QVBoxLayout()
             t_lbl = QLabel(f"{c['course_code']} • {c['course_name']}")
-            t_lbl.setStyleSheet("font-weight: 700;")
+            t_lbl.setStyleSheet("font-weight: 600;")
             s_lbl = QLabel(
                 f"🕒 {self.db.format_time(c['start_time'])} - {self.db.format_time(c['end_time'])}  |  "
                 f"🏢 {c['building_number']}, Room {c['room_number']}  |  👩‍🏫 {c['faculty_short_name']}"
@@ -420,7 +428,7 @@ class DashboardPage(QWidget):
 
             left = QVBoxLayout()
             title = QLabel(f"[{ex['exam_type']}] {ex['course_code']}: {ex['course_name']}")
-            title.setStyleSheet("font-weight: 700;")
+            title.setStyleSheet("font-weight: 600;")
             sub = QLabel(
                 f"📅 {ex['exam_date']} at {self.db.format_time(ex['exam_time'])}  •  📍 {ex['room_number']}"
             )
@@ -496,3 +504,4 @@ class DashboardPage(QWidget):
             rl.addWidget(bar, 1)
             rl.addWidget(lbl_tag)
             self.att_bars_layout.addWidget(row_w)
+

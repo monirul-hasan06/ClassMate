@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Primary Gradient -->
+    <linearGradient id="cmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="45%" stop-color="#6366F1"/>
+      <stop offset="85%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <!-- Top Highlight Glass Sheen -->
+    <linearGradient id="cmSheen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <!-- Mortarboard Diamond Gradient -->
+    <linearGradient id="capTopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <!-- Cap Underside 3D Gradient -->
+    <linearGradient id="capUnderGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+
+    <!-- Book Wing Left -->
+    <linearGradient id="wingLeftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <!-- Book Wing Right -->
+    <linearGradient id="wingRightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+
+    <!-- Gold Accent Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="60%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="cardShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#0F172A" flood-opacity="0.45"/>
+    </filter>
+    <filter id="capShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#020617" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+
+  <!-- Squircle Base Canvas -->
+  <rect x="28" y="28" width="456" height="456" rx="108" fill="url(#cmBg)" filter="url(#cardShadow)"/>
+
+  <!-- Subtle Border Rim -->
+  <rect x="30" y="30" width="452" height="452" rx="106" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="4"/>
+
+  <!-- Glossy Sheen Overlay -->
+  <path d="M 30 136 C 30 78 78 30 136 30 L 376 30 C 434 30 482 78 482 136 L 482 220 C 340 260 170 240 30 180 Z" 
+        fill="url(#cmSheen)"/>
+
+  <!-- Open Book / Wings of Education Base -->
+  <g filter="url(#capShadow)">
+    <!-- Left Open Book Wing -->
+    <path d="M 256 348 C 218 316 156 312 96 332 C 88 335 84 342 84 350 L 84 402 C 84 409 91 415 98 413 C 154 394 212 400 256 428 Z" 
+          fill="url(#wingLeftGrad)"/>
+    <path d="M 112 348 C 160 334 208 340 242 364" stroke="#BAE6FD" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.75"/>
+    <path d="M 112 368 C 160 354 208 360 242 384" stroke="#BAE6FD" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.45"/>
+
+    <!-- Right Open Book Wing -->
+    <path d="M 256 348 C 294 316 356 312 416 332 C 424 335 428 342 428 350 L 428 402 C 428 409 421 415 414 413 C 358 394 300 400 256 428 Z" 
+          fill="url(#wingRightGrad)"/>
+    <path d="M 400 348 C 352 334 304 340 270 364" stroke="#DDD6FE" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.75"/>
+    <path d="M 400 368 C 352 354 304 360 270 384" stroke="#DDD6FE" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.45"/>
+
+    <!-- Book Center Spine Pin -->
+    <line x1="256" y1="346" x2="256" y2="428" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Modern Academic Mortarboard Graduation Cap -->
+  <g filter="url(#capShadow)">
+    <!-- Skull Cap Underside Arch -->
+    <path d="M 180 206 C 180 264 214 294 256 294 C 298 294 332 264 332 206 Z" 
+          fill="#1E1B4B" opacity="0.75"/>
+
+    <!-- Mortarboard 3D Lower Edge -->
+    <polygon points="92,180 256,262 420,180 420,192 256,274 92,192" 
+             fill="url(#capUnderGrad)"/>
+
+    <!-- Main Diamond Mortarboard Top -->
+    <polygon points="256,96 420,180 256,262 92,180" 
+             fill="url(#capTopGrad)"/>
+
+    <!-- Subtle Diamond Inner Rim Highlight -->
+    <polygon points="256,104 410,180 256,254 102,180" 
+             fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/>
+
+    <!-- Center Golden Button -->
+    <ellipse cx="256" cy="178" rx="14" ry="10" fill="url(#goldGrad)"/>
+
+    <!-- Tassel Ribbon Sweeping to Right -->
+    <path d="M 256 178 Q 366 190 376 256" 
+          fill="none" stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Hanging Golden Tassel -->
+    <polygon points="368,256 384,256 388,310 364,310" 
+             fill="url(#goldGrad)"/>
+    <line x1="364" y1="310" x2="388" y2="310" stroke="#B45309" stroke-width="3"/>
+  </g>
+
+  <!-- Sparkling Spark of Wisdom (Upper Right) -->
+  <g transform="translate(390, 96)">
+    <path d="M 0 -22 Q 0 0 22 0 Q 0 0 0 22 Q 0 0 -22 0 Q 0 0 0 -22 Z" fill="#FDE047"/>
+    <circle cx="0" cy="0" r="5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Subtle Ambient Sparkle (Upper Left) -->
+  <g transform="translate(118, 120) scale(0.65)">
+    <path d="M 0 -20 Q 0 0 20 0 Q 0 0 0 20 Q 0 0 -20 0 Q 0 0 0 -20 Z" fill="#BAE6FD"/>
+  </g>
+</svg>
